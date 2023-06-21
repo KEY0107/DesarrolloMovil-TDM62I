@@ -1,0 +1,42 @@
+* {
+    font-family: sans-serif;
+}
+
+.tabla {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tabla thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px 15px;
+}
+
+.tabla tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabla tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tabla tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.tabla tbody tr.contraste {
+    font-weight: bold;
+    color: #009879;
+}

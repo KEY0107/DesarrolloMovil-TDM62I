@@ -1,0 +1,45 @@
+<%- include ('layouts/header.ejs') %>
+
+<div class="container">
+  <br>
+    <h1><%= title %></h1>
+
+    <!--se coloca todo el diseño aqui-->
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Titulo</th>
+              <th>Imagen</th>
+              <th>Descripcion</th>
+              <th>Precio</th>
+              <th></th>
+            </tr>
+          </thead>
+
+
+            <tbody>
+              <!-- Leer la información de la base de datos-->
+
+              <% for (var i=0; i<Guantes.length; i++) { %>
+              <tr class="contraste">
+                <th><%= Guantes[i].ID %></th>
+                <td><%= Guantes[i].titulo %></td>
+                <td><img height="200" src=" <%= Guantes[i].imagen %> "></td>
+                <td><%= Guantes[i].descripcion %></td>
+                <td><%= Guantes[i].precio %></td>
+                <td>
+                  <a href="/edit/<%= Guantes[i].ID %>"><i class='bx bxs-edit bx-md' ></i></a>
+                  <a href="/delete/<%= Guantes[i].ID %>"><i class='bx bxs-eraser bx-md' ></i></a>
+                </td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+    <hr width="100%">
+    <div class="container">
+      <a href="/create" class="btn btn-outline-primary mt-4"><i class='bx bx-list-plus bx-md'></i></a>
+    </div>
+
+ <%- include ('layouts/footer.ejs') %>
+ 
